@@ -11,5 +11,12 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (arguments.length === 0 || array.length === 0) return 0;
+
+  var total = 0;
+  for(var i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+
+  return total / array.length;
 }
